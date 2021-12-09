@@ -1,4 +1,19 @@
 <style>
+body{
+    background-image: url("https://raw.githubusercontent.com/CarlosOCH/FreeCodeProjects/main/Survey%20Form/pexels-josh-sorenson-1714208.jpg");    
+    background-size: cover;
+    background-color: cyan;
+}
+
+#survey-form{
+    background-color: red;
+    border-radius: 5%;
+    text-align: left;
+    width: fit-content;
+    height: auto;
+    padding: 10px 20px 10px 20px;
+    
+}
 
 </style>
 
@@ -8,7 +23,91 @@
         <tittle>Survey Form</tittle>
     </head>
     <header>
-        <h3>FreeCodeCamp Survey Form</h3>
-        <p><i>Thank you for taking the time to help us improve the platform</i></p>
+        <h1 id="tittle">FreeCodeCamp Survey Form</h1>
+        <p id="description"><i>Thank you for taking the time to help us improve the platform</i></p>
     </header>
+    <body>
+        <form id="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name"> Name </label>
+                <input
+                type="text"
+                name="name"
+                id="name"
+                class="form-control"
+                placeholder="Enter your Name here"
+                required
+                />
+            </div>
+            <div id="form-group">
+                <label id="email-label" for="email"> Email </label>
+                <input
+                type="email"
+                name="email"
+                id="email"
+                class="form-control"
+                placeholder="Enter your Email here"
+                required
+                />
+            </div>
+            <div id="form-group">
+                <label id="number-label" for="number"> Age 
+                    <span class="clue"> (Optional) </span>
+                </label>
+                <input
+                type="number"
+                name="age"
+                id="number"
+                min="10"
+                max="99"
+                class="form-control"
+                placeholder="Age"
+                />
+            </div>
+            <div class="form-group">
+                <p> Which option best describes your current role? </p>
+                <select id="dropdown" name="role" class="form-control" required>
+                    <option disabled selected value> Select current role </option>
+                    <option value="student"> Student </option>
+                    <option value="job"> Full time job </option>
+                    <option value="learner"> Full time learner </option>
+                    <option value="preferNon"> Prefer not to say </option>
+                    <option value="other"> Other </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p> Would you recommend freeCodeCamp to a friend? </p>
+                <label>
+                    <input
+                    name="user-recommend"
+                    value="defnitely"
+                    type="radio"
+                    class="input-radio"
+                    checked
+                    /> 
+                    Defnitely 
+                </label>
+                <label>
+                    <input
+                    name="user-recommend"
+                    value="maybe"
+                    type="radio"
+                    class="input-radio"
+                    checked
+                    />
+                    Maybe
+                </label>
+                <label>
+                    <input
+                    name="user-recommend"
+                    vallue="no"
+                    type="radio"
+                    class="input-radio"
+                    checked
+                    />
+                    no
+                </label>       
+            </div>
+        </form>
+    </body>
 </html>
