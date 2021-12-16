@@ -1,18 +1,44 @@
 <style>
-body{
-    background-image: url("https://raw.githubusercontent.com/CarlosOCH/FreeCodeProjects/main/Survey%20Form/pexels-josh-sorenson-1714208.jpg");    
-    background-size: cover;
-    background-color: cyan;
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+:root{
+    --color-white: #f3f3f3;
+    ---color-darkblue: #1b1b32;
+    --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+    --color-green: #007a10;
 }
 
-#survey-form{
-    background-color: red;
-    border-radius: 5%;
-    text-align: left;
-    width: fit-content;
-    height: auto;
-    padding: 10px 20px 10px 20px;
-    
+
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--color-white);
+    margin: 0;
+}
+
+/* mobile settings*/
+body::before{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: var(--color-darkblue-alpha);
+    background-image: linear-gradient(
+        115deg,
+        rgba(58,58,158, 0.8),
+        rgba(136, 136, 206, 0.7)
+    ), url("https://raw.githubusercontent.com/CarlosOCH/FreeCodeProjects/main/Survey%20Form/pexels-josh-sorenson-1714208.jpg");    
+    background-size: cover;
 }
 
 </style>
@@ -20,7 +46,7 @@ body{
 <!DOCTYPE html>
 <html>
     <head>
-        <tittle>Survey Form</tittle>
+        <title>Survey Form</title>
     </head>
     <header>
         <h1 id="tittle">FreeCodeCamp Survey Form</h1>
